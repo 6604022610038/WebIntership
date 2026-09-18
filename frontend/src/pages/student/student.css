@@ -1767,3 +1767,729 @@
   cursor: default;
 }
 
+/* =========================================================
+   MOBILE DASHBOARD
+   Responsive สำหรับมือถือ
+   ========================================================= */
+
+/* ---------- Tablet ---------- */
+@media (max-width: 900px) {
+
+  .dashboard-page {
+    width: 100%;
+    padding: 0 0 20px;
+  }
+
+  /* Welcome */
+  .welcome-card {
+    min-height: 150px;
+    padding: 25px 28px;
+  }
+
+  .welcome-content h1 {
+    font-size: 21px;
+  }
+
+  .welcome-subtitle {
+    font-size: 12.5px;
+  }
+
+  .welcome-quote {
+    font-size: 12px;
+  }
+
+  .welcome-illustration {
+    width: 250px;
+    transform: scale(.75);
+    transform-origin: right bottom;
+    right: 0;
+  }
+
+
+  /* Statistics */
+  .dashboard-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .dashboard-stat-card {
+    min-height: 110px;
+    padding: 14px;
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .stat-card-content p {
+    font-size: 11.5px;
+  }
+
+  .stat-number {
+    font-size: 20px;
+  }
+
+
+  /* Main dashboard */
+  .dashboard-main-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .calendar-panel {
+    grid-column: auto;
+  }
+
+  .dashboard-middle-column {
+    width: 100%;
+  }
+
+
+  /* Internship */
+  .internship-panel {
+    min-height: auto;
+  }
+
+  .progress-content {
+    gap: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .dashboard-page {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0 18px;
+    overflow: hidden;
+  }
+
+
+  /* =====================================================
+     WELCOME CARD
+     ===================================================== */
+
+  .dashboard-top-grid {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .welcome-card {
+    width: 100%;
+    min-height: 150px;
+    padding: 22px 20px;
+    border-radius: 12px;
+  }
+
+  .welcome-content {
+    max-width: 72%;
+  }
+
+  .welcome-content h1 {
+    font-size: 19px;
+    line-height: 1.4;
+  }
+
+  .welcome-subtitle {
+    margin-top: 7px;
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+
+  .welcome-quote {
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .welcome-illustration {
+    width: 190px;
+    height: 120px;
+    right: -8px;
+    bottom: 0;
+    transform: scale(.72);
+    transform-origin: right bottom;
+  }
+
+
+  /* =====================================================
+     STAT CARDS
+     ===================================================== */
+
+  .dashboard-stat-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .dashboard-stat-card {
+    width: 100%;
+    min-height: 105px;
+    padding: 12px;
+    gap: 10px;
+    border-radius: 11px;
+  }
+
+  .stat-icon {
+    width: 39px;
+    height: 39px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .stat-card-content {
+    min-width: 0;
+  }
+
+  .stat-card-content p {
+    margin-bottom: 3px;
+    font-size: 10.5px;
+    line-height: 1.35;
+  }
+
+  .stat-number {
+    font-size: 19px;
+    line-height: 1.2;
+  }
+
+  .stat-number span {
+    font-size: 10px;
+  }
+
+  .stat-card-content small {
+    font-size: 9.5px;
+    line-height: 1.3;
+  }
+
+  .stat-progress {
+    gap: 5px;
+    margin-top: 6px;
+  }
+
+  .stat-progress-bg {
+    height: 4px;
+  }
+
+  .stat-progress > span {
+    font-size: 9px;
+  }
+
+  .stars {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .round-arrow {
+    width: 22px;
+    height: 22px;
+    right: 7px;
+    font-size: 11px;
+  }
+
+
+  /* =====================================================
+     MAIN GRID
+     ===================================================== */
+
+  .dashboard-main-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .dashboard-middle-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dashboard-panel {
+    width: 100%;
+    border-radius: 11px;
+  }
+
+
+  /* =====================================================
+     PANEL TITLE
+     ===================================================== */
+
+  .panel-title {
+    min-height: 46px;
+    height: 46px;
+    padding: 0 13px;
+  }
+
+  .panel-title > div {
+    width: 29px;
+    height: 29px;
+    font-size: 13px;
+  }
+
+  .panel-title h2 {
+    font-size: 11.5px;
+  }
+
+  .view-all-button {
+    font-size: 10.5px;
+  }
+
+
+  /* =====================================================
+     INTERNSHIP BOX
+     ===================================================== */
+
+  .internship-box {
+    min-height: 120px;
+    margin: 11px;
+    padding: 11px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .internship-company-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .internship-details {
+    min-width: 0;
+    padding-right: 0;
+    font-size: 10.5px;
+  }
+
+  .internship-details p {
+    margin: 3px 0;
+    line-height: 1.45;
+  }
+
+  .internship-status {
+    top: auto;
+    right: 10px;
+    bottom: 9px;
+    padding: 5px 8px;
+    font-size: 9.5px;
+  }
+
+  .details-button {
+    left: 10px;
+    right: auto;
+    bottom: 9px;
+    font-size: 10px;
+  }
+
+
+  /* =====================================================
+     PROGRESS
+     ===================================================== */
+
+  .progress-section {
+    padding: 11px;
+  }
+
+  .progress-title {
+    font-size: 11.5px;
+  }
+
+  .progress-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .progress-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .progress-circle svg {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .progress-circle-text strong {
+    font-size: 21px;
+  }
+
+  .progress-circle-text span {
+    font-size: 10px;
+  }
+
+  .progress-steps {
+    width: 100%;
+  }
+
+  .progress-step {
+    gap: 8px;
+    margin-bottom: 9px;
+  }
+
+  .step-dot {
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+  }
+
+  .step-text strong {
+    font-size: 11px;
+  }
+
+  .step-text span {
+    font-size: 10px;
+  }
+
+
+  /* =====================================================
+     ACTIVITIES
+     ===================================================== */
+
+  .activity-list {
+    padding: 2px 11px;
+  }
+
+  .activity-item {
+    min-height: 55px;
+    gap: 9px;
+  }
+
+  .activity-icon {
+    width: 33px;
+    height: 33px;
+    font-size: 13px;
+  }
+
+  .activity-content strong {
+    font-size: 10.5px;
+  }
+
+  .activity-content span {
+    font-size: 9.5px;
+  }
+
+  .activity-status {
+    padding: 4px 6px;
+    font-size: 9px;
+  }
+
+
+  /* =====================================================
+     ANNOUNCEMENT
+     ===================================================== */
+
+  .announcement-content {
+    padding: 10px 11px;
+    gap: 8px;
+  }
+
+
+  /* =====================================================
+     CALENDAR
+     ===================================================== */
+
+  .calendar-panel {
+    width: 100%;
+    min-height: auto;
+  }
+
+
+  /* =====================================================
+     STUDENT INFO
+     ===================================================== */
+
+  .student-info-card {
+    width: 100%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .student-info-content {
+    gap: 10px;
+  }
+
+  .student-avatar-large {
+    width: 46px;
+    height: 46px;
+    font-size: 16px;
+  }
+
+  .student-info-text strong {
+    font-size: 12px;
+  }
+
+  .student-info-text span {
+    font-size: 10px;
+  }
+
+  .profile-button {
+    padding: 7px 10px;
+    font-size: 10.5px;
+  }
+
+
+  /* =====================================================
+     FORMS / OTHER DASHBOARD CONTENT
+     ===================================================== */
+
+  .form-action-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .form-action-card {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 14px;
+    border-radius: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   เช่น iPhone SE / หน้าจอ 360px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .dashboard-page {
+    padding-bottom: 15px;
+  }
+
+
+  /* Welcome */
+  .welcome-card {
+    min-height: 145px;
+    padding: 18px 16px;
+  }
+
+  .welcome-content {
+    max-width: 100%;
+    padding-right: 75px;
+  }
+
+  .welcome-content h1 {
+    font-size: 17px;
+  }
+
+  .welcome-subtitle {
+    font-size: 10.5px;
+  }
+
+  .welcome-quote {
+    font-size: 10px;
+  }
+
+  .welcome-illustration {
+    width: 125px;
+    height: 105px;
+    right: -5px;
+    transform: scale(.6);
+    transform-origin: right bottom;
+  }
+
+
+  /* Stats → 2 columns */
+  .dashboard-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .dashboard-stat-card {
+    min-height: 100px;
+    padding: 10px;
+    gap: 7px;
+  }
+
+  .stat-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .stat-card-content p {
+    font-size: 9.5px;
+  }
+
+  .stat-number {
+    font-size: 17px;
+  }
+
+  .stat-number span {
+    font-size: 9px;
+  }
+
+  .stat-card-content small {
+    font-size: 8.5px;
+  }
+
+  .stars {
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+
+  .round-arrow {
+    width: 20px;
+    height: 20px;
+    right: 5px;
+  }
+
+
+  /* Panels */
+  .panel-title {
+    padding: 0 11px;
+  }
+
+  .panel-title h2 {
+    font-size: 11px;
+  }
+
+
+  /* Internship */
+  .internship-box {
+    min-height: 128px;
+    margin: 9px;
+    padding: 10px;
+  }
+
+  .internship-details {
+    font-size: 9.5px;
+  }
+
+  .internship-status {
+    font-size: 8.5px;
+    padding: 4px 7px;
+  }
+
+  .details-button {
+    font-size: 9px;
+  }
+
+
+  /* Progress */
+  .progress-circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .progress-circle svg {
+    width: 110px !important;
+    height: 110px !important;
+  }
+
+  .progress-circle-text strong {
+    font-size: 19px;
+  }
+
+  .progress-circle-text span {
+    font-size: 9px;
+  }
+
+
+  /* Activities */
+  .activity-item {
+    min-height: 52px;
+  }
+
+  .activity-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .activity-content strong {
+    font-size: 9.5px;
+  }
+
+  .activity-content span {
+    font-size: 8.5px;
+  }
+
+  .activity-status {
+    font-size: 8px;
+  }
+
+
+  /* Student info */
+  .student-info-content {
+    align-items: flex-start;
+  }
+
+  .profile-button {
+    padding: 6px 8px;
+    font-size: 9px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   320 - 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .welcome-content {
+    padding-right: 0;
+  }
+
+  .welcome-illustration {
+    display: none;
+  }
+
+  .dashboard-stat-card {
+    min-height: 94px;
+    padding: 9px;
+  }
+
+  .stat-icon {
+    width: 31px;
+    height: 31px;
+    font-size: 13px;
+  }
+
+  .stat-card-content p {
+    font-size: 8.5px;
+  }
+
+  .stat-number {
+    font-size: 16px;
+  }
+
+  .stat-number span {
+    font-size: 8px;
+  }
+
+  .round-arrow {
+    display: none;
+  }
+
+  .internship-box {
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+
+  .internship-company-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+}
