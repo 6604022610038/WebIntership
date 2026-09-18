@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { api } from "../../services/api";
 import "./Login.css";
 
 export default function Login({ onLogin }) {
@@ -10,73 +11,58 @@ export default function Login({ onLogin }) {
   const [error, setError] = useState("");
 
   async function handleLogin(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!username.trim() || !password.trim()) {
-      setError("กรุณากรอกชื่อผู้ใช้งานและรหัสผ่าน");
-      return;
-    }
-
-    setLoading(true);
-    setError("");
-
-    try {
-      const response = await fetch(
-        "http://localhost:5000/api/auth/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            username: username.trim(),
-            password,
-          }),
-        }
-      );
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(
-          data.message ||
-            "ชื่อผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง"
-        );
-      }
-
-      localStorage.setItem(
-        "internship_token",
-        data.token
-      );
-
-      localStorage.setItem(
-        "internship_user",
-        JSON.stringify(data.user)
-      );
-
-      if (data.user?.role === "advisor") {
-        localStorage.setItem(
-          "internship_page",
-          "advisor-dashboard"
-        );
-      } else {
-        localStorage.setItem(
-          "internship_page",
-          "dashboard"
-        );
-      }
-
-      onLogin(data.user);
-
-    } catch (err) {
-      setError(
-        err.message ||
-          "ไม่สามารถเข้าสู่ระบบได้"
-      );
-    } finally {
-      setLoading(false);
-    }
+  if (!username.trim() || !password.trim()) {
+    setError("กรุณากรอกชื่อผู้ใช้งานและรหัสผ่าน");
+    return;
   }
+
+  setLoading(true);
+  setError("");
+
+  try {
+    const data = await api("/auth/login", {
+      method: "POST",
+      body: JSON.stringify({
+        username: username.trim(),
+        password,
+      }),
+    });
+
+    localStorage.setItem(
+      "internship_token",
+      data.token
+    );
+
+    localStorage.setItem(
+      "internship_user",
+      JSON.stringify(data.user)
+    );
+
+    if (data.user?.role === "advisor") {
+      localStorage.setItem(
+        "internship_page",
+        "advisor-dashboard"
+      );
+    } else {
+      localStorage.setItem(
+        "internship_page",
+        "dashboard"
+      );
+    }
+
+    onLogin(data.user);
+
+  } catch (err) {
+    setError(
+      err.message ||
+        "ไม่สามารถเข้าสู่ระบบได้"
+    );
+  } finally {
+    setLoading(false);
+  }
+}
 
   return (
     <div className="login-page">
